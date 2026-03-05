@@ -1,0 +1,128 @@
+footer { text-align: center; padding: 60px; color: #bbb; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+/* Reset para que todo encaje bien */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #996515; /* Dorado oscuro para que Lighthouse no se queje */
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    padding: 10px 15px; /* Espacio extra para que sea fácil de tocar */
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #996515;
+}
+
+/* Header de Servicios con Imagen de Oficina de Lujo */
+.servicios-header {
+    height: 60vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                      url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.servicios-header span {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.servicios-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+.servicios-header h1 em {
+    color: #d4af37;
+    font-style: italic;
+}
+
+/* Cuadrícula de Servicios */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 100px 8%;
+}
+
+/* LA ANIMACIÓN ESTÁ AQUÍ */
+.servicio-item {
+    background: #fff;
+    padding: 60px 40px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: all 0.4s ease-in-out; /* Esta es la clave de la animación */
+}
+
+.servicio-item:hover {
+    transform: translateY(-20px); /* Hace que la tarjeta "salte" hacia arriba */
+    border-color: #996515;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.serv-icon {
+    font-size: 35px;
+    color: #996515;
+    margin-bottom: 25px;
+}
+
+.servicio-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.servicio-item p {
+    font-size: 0.95rem;
+    color: #666;
+}
